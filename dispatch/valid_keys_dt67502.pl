@@ -69,7 +69,9 @@ else {
 
 =item find_valid_keys
 
-Runs through the list of possible section keys and recursively builds up a
+Runs through the list of possible section keys and recursively builds a key up
+to the given length. At the end it prints out the number of valid and total
+keys.
 
 =cut
 
@@ -100,6 +102,11 @@ sub find_valid_keys {
 }
 
 =item subkey_count
+
+Recursively joins keys together up to the max length and returns 1 if
+successful. Makes sure that no key is present twice, not even their subkeys.
+
+Example: if 18 is already part of the key then 1, 8 or 18 can't be used again.
 
 =cut
 
