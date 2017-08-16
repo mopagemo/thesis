@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+=encoding utf-8
+
 =head1 NAME
 
 code_c.pl - Encrypts and decrypts messages with algorithm Code C1
@@ -15,7 +17,7 @@ code_c.pl - Encrypts and decrypts messages with algorithm Code C1
 =head1 DESCRIPTION
 
 Encrypt and decrypt messages with the algorithm Code C1, as developed by the
-Ministerium fuer Staatssicherheit (MfS) in the GDR. It uses a combination of
+Ministerium für Staatssicherheit (MfS) in the GDR. It uses a combination of
 letter substitution and columnar transposition, as well as fill characters.
 
 =head2 Options
@@ -415,8 +417,7 @@ sub reverse_sub {
 
 =item fill_box_decrypt
 
-Fills columns and rows with the text for description, according to the key
-given.
+Fills columns and rows with the text for decryption, according to the key given.
 
 =cut
 
